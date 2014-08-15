@@ -47,6 +47,14 @@
 
 #define KEY_SPACE           32
 
+#define R1                  A0
+#define G1                  A1
+#define B1                  A2
+#define R2                  A3
+#define G2                  A4
+#define B2                  A5
+
+
 class IRDuino{
 
 private:
@@ -63,6 +71,9 @@ private:
 public:
 
     void begin();
+    
+    void led(int pin, int state);
+    void all_led_off();
     
     bool addItem(int irCode, void (*pfun)());
     

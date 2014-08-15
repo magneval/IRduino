@@ -12,8 +12,39 @@ void IRDuino::begin()
 
     Keyboard.begin();
     IR.Init(PINIR);
+    
+    for(int i=A0; i<=A5; i++)
+    {
+        pinMode(i, OUTPUT);
+        digitalWrite(i, HIGH);                      // all led off
+    }
+    
+    led(B1, 1);
+    led(B2, 1);
 }
 
+// control led
+void IRDuino::led(int pin, int state)
+{
+    if(pin>A5 || pin<A0)return;                     // err pin
+    
+    int pin_off = (pin<=A2) ? 0 : 3;
+    
+    for(int i=A0+pin_off; i<=(A2+pin_off); i++)     // all led off in one side
+    {
+        digitalWrite(i, HIGH);
+    }
+    digitalWrite(pin, 1-state);
+}
+
+// all led off
+void IRDuino::all_led_off()
+{
+    for(int i=A0; i<=A5; i++)
+    {
+        digitalWrite(i, HIGH);
+    }
+}
 
 // press a key, then release it
 void IRDuino::keyPressRelease(unsigned char keyNum)
@@ -76,6 +107,7 @@ void IRDuino::process()
     if(irCode<=0)
     {
         Serial.println("get error code, try again");
+        
     }
     else
     {
@@ -90,10 +122,21 @@ void IRDuino::process()
         Serial.print("task_loca = ");
         Serial.println(task_loca);
         (task_fun[task_loca])();
+        
+        led(G1, 1);
+        led(G2, 1);
+        delay(100);
+        led(G1, 0);
+        led(G2, 0);
     }
     else
     {
         Serial.println("can't find this ir code");
+        led(R1, 1);
+        led(R2, 1);
+        delay(100);
+        led(R1, 0);
+        led(R2, 0);
     }
     
     Serial.println("+------------------------------------------------------+\r\n\r\n");
