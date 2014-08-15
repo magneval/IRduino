@@ -24,13 +24,14 @@
 -----------------------------------------------------------------------------*/
 
 #include <IRDuino.h>
-
+     
 // IR CODE DEFINE
 #define IR_CODE_UP          0xee
 #define IR_CODE_DOWN        0xae
 #define IR_CODE_LEFT        0xce
 #define IR_CODE_RIGHT       0x8e
-
+#define IR_CODE_SPACE       0x72
+     
 void setup()
 {
     iRduino.begin();
@@ -41,6 +42,7 @@ void setup()
     iRduino.addItem(IR_CODE_DOWN, task_down);
     iRduino.addItem(IR_CODE_LEFT, task_left);
     iRduino.addItem(IR_CODE_RIGHT, task_right);
+    iRduino.addItem(IR_CODE_SPACE, task_space);
 }
 
 
@@ -69,4 +71,9 @@ void task_left()
 void task_right()
 {
     iRduino.keyPressRelease(KEY_RIGHT_ARROW);
+}
+
+void task_space()
+{
+    iRduino.keyPressRelease(KEY_SPACE);
 }

@@ -45,6 +45,8 @@
 #define KEY_F12				0xCD
 */
 
+#define KEY_SPACE           32
+
 class IRDuino{
 
 private:

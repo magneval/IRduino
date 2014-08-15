@@ -40,9 +40,10 @@ void openWebPage()
     delay(100);
     
     iRduino.printf("iexplore.exe ");
-    iRduino.printf("https://github.com/loovee/IRDuino");
+    delay(100);
+    iRduino.printf("longan.im");
     
-    delay(10);
+    delay(100);
     iRduino.keyPressRelease(KEY_RETURN);
 
 }
@@ -53,7 +54,7 @@ void setup()
     
     delay(1000);
     openWebPage();
-    
+    d
 }
 
 
