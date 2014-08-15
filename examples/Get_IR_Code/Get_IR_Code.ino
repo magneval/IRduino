@@ -2,10 +2,9 @@
   GetIRCode.ino
   2014 Copyright (c) Longan Lab.  All right reserved.
  
-  Author:Loovee
+  Author:Llama
   2014-6-29
   
-
   Function - 
   Insert your IRDuino, upload the code, then open Serial monitor,
   Choose baudrate 115200, then point your IR remote to IRduino,
@@ -25,7 +24,7 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
-#include <IRDuino.h>
+#include <IRduino.h>
 
 #define INFO_STR "This is an demo of IRDuino - Get IR Code\r\nMore dtails refer to https://github.com/loovee/IRDuino\r\n\r\n"
 

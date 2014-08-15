@@ -1,8 +1,8 @@
 /*-------------------------------------------------------------------------- +
   Task_Mode_Empty.ino
-  2012 Copyright (c) Longan Lab.  All right reserved.
+  2014 Copyright (c) Longan Lab.  All right reserved.
  
-  Author:Loovee
+  Author:Llama
   2014-6-29
   
 
@@ -26,14 +26,13 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
 
-
-#include <IRDuino.h>
+#include <IRduino.h>
 
 /*
  * define your IR code here
  */
 
-//#define IR_CODE_XXX   0x10
+#define IR_CODE_XXX   0x10
 
 void setup()
 {

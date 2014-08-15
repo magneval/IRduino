@@ -14,7 +14,7 @@
  * http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1210243556
  * Also influenced by http://zovirl.com/2008/11/12/building-a-universal-remote-with-an-arduino/
  *
- * Modified by Loovee, reeed1024@gmail.com
+ * Modified by Llama, reeed1024@gmail.com
  * Receive Only One Byte
  *
  */
@@ -22,8 +22,8 @@
 #include <Streaming.h>
 
 
-#include "IRDuinoRecvInt.h"
-#include "IRDuinoRecv.h"
+#include "IRduinoRecvInt.h"
+#include "IRduinoRecv.h"
 
 // Provides ISR
 #include <avr/interrupt.h>

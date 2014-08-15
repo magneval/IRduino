@@ -1,12 +1,35 @@
+/*-------------------------------------------------------------------------- +
+  IRduino.cpp
+  2014 Copyright (c) Longan Lab.  All right reserved.
+ 
+  Author:Llama
+  2014-7-6
+  
+  https://github.com/LonganLab/IRduino
+  
+  -------------------
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-----------------------------------------------------------------------------*/
 #include <Arduino.h>
-#include <IRDuino.h>
-#include <IRDuinoRecv.h>
+#include <IRduino.h>
+#include <IRduinoRecv.h>
 
 #define PINIR               6
 
 #define __DBG               0
 
-void IRDuino::begin()
+void IRduino::begin()
 {
     num_code= 0;
 
@@ -24,7 +47,7 @@ void IRDuino::begin()
 }
 
 // control led
-void IRDuino::led(int pin, int state)
+void IRduino::led(int pin, int state)
 {
     if(pin>A5 || pin<A0)return;                     // err pin
     
@@ -38,7 +61,7 @@ void IRDuino::led(int pin, int state)
 }
 
 // all led off
-void IRDuino::all_led_off()
+void IRduino::all_led_off()
 {
     for(int i=A0; i<=A5; i++)
     {
@@ -47,7 +70,7 @@ void IRDuino::all_led_off()
 }
 
 // press a key, then release it
-void IRDuino::keyPressRelease(unsigned char keyNum)
+void IRduino::keyPressRelease(unsigned char keyNum)
 {
     Keyboard.press(keyNum);
     delay(1);
@@ -57,7 +80,7 @@ void IRDuino::keyPressRelease(unsigned char keyNum)
 /*
  * enter a string
  */
-void IRDuino::printf(char *str)
+void IRduino::printf(char *str)
 {
     if(NULL == str)return;
 
@@ -72,7 +95,7 @@ void IRDuino::printf(char *str)
 /*
  * find if this ir code was stored, if not return -1
  */
-int IRDuino::find_ir_code(int irCode)
+int IRduino::find_ir_code(int irCode)
 {
     for(int i=0; i<num_code; i++)
     {
@@ -89,14 +112,14 @@ int IRDuino::find_ir_code(int irCode)
 /*
  * add an task
  */
-bool IRDuino::addItem(int irCode, void (*pfun)())
+bool IRduino::addItem(int irCode, void (*pfun)())
 {
     ir_code[num_code]    = irCode;
     task_fun[num_code++] = pfun;
 }
 
 /* process */
-void IRDuino::process()
+void IRduino::process()
 {
     if(!isGetIrDta())return;
 
@@ -144,4 +167,4 @@ void IRDuino::process()
 
 
 
-IRDuino iRduino;
+IRduino iRduino;

@@ -1,8 +1,8 @@
 /*-------------------------------------------------------------------------- +
   Write_String.ino
-  2012 Copyright (c) Longan Lab.  All right reserved.
+  2014 Copyright (c) Longan Lab.  All right reserved.
  
-  Author:Loovee
+  Author:Llama
   2014-6-29
   
   Function - 
@@ -24,7 +24,7 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
 
-#include <IRDuino.h>
+#include <IRduino.h>
 
 #define IRCODE_LOGOUT       0xEA
 #define IRCODE_ENTERKEY     0x72

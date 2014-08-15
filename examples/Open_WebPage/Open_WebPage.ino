@@ -2,14 +2,14 @@
   Open_WebPage.ino
   2014 Copyright (c) Longan Lab.  All right reserved.
  
-  Author:Loovee
+  Author:Llama
   2014-7-6
   
 
   Function - 
   This demo will open a web page when you insert your IRDuino to a PC.
  
-  https://github.com/loovee/IRDuino
+  https://github.com/LonganLab/IRduino
   
   This demo can only support Windows, not for linux and osx.
   
@@ -27,7 +27,7 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
-#include <IRDuino.h>
+#include <IRduino.h>
 
 void openWebPage()
 {
@@ -54,7 +54,6 @@ void setup()
     
     delay(1000);
     openWebPage();
-    d
 }
 
 

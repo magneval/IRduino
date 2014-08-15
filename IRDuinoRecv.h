@@ -5,7 +5,7 @@
  * For details, see http://arcfn.com/2009/08/multi-protocol-infrared-remote-library.htm http://arcfn.com
  * Edited by Mitra to add new controller SANYO
  *
- * Modified by loovee
+ * Modified by Llama
  * 2014-6-24
  *
  * change log:
@@ -17,7 +17,7 @@
  *
  * JVC and Panasonic protocol added by Kristian Lauszus (Thanks to zenwheel and other people at the original blog post)
  *
- * Modified by Loovee, reeed1024@gmail.com
+ * Modified by Llama, reeed1024@gmail.com
  * Receive Only One Byte
  */
 
