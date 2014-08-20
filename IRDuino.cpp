@@ -144,13 +144,14 @@ void IRduino::process()
     {
         Serial.print("task_loca = ");
         Serial.println(task_loca);
-        (task_fun[task_loca])();
         
         led(G1, 1);
         led(G2, 1);
         delay(100);
         led(G1, 0);
         led(G2, 0);
+        
+        (task_fun[task_loca])();
     }
     else
     {
