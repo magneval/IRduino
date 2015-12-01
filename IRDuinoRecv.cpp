@@ -18,10 +18,6 @@
  * Receive Only One Byte
  *
  */
-
-#include <Streaming.h>
-
-
 #include "IRduinoRecvInt.h"
 #include "IRduinoRecv.h"
 
@@ -59,38 +55,16 @@ unsigned char IRSendRev::RecvQueue(int nShort)              // get the byte from
     unsigned char dtaGet = 0;
     nShort*=3;
     
-#if __DEBUG
-    cout << "begin to calc queue" << endl;
-#endif
     for(int i=0; i<8; i++)
     {
         if((queue_ir[2*i] + queue_ir[2*i+1]) > nShort)
         {
             dtaGet |= 0x01;
-#if __DEBUG
-            cout << "1" ;
-#endif
+
         }
-#if __DEBUG
-        else
-        cout << "0";
-#endif
+
         dtaGet = dtaGet<<1;
     }
-    
-#if __DEBUG
-    cout << endl;
-    cout << "dtaGet = " << dtaGet << endl;
-    Serial.println("queue data:");
-
-    for(int i=0; i<16; i++)
-    {
-        Serial.print(queue_ir[i]);
-        Serial.print("\t");
-    }
-    
-    Serial.println();
-#endif
     oneByte = dtaGet;
     return dtaGet;
 }
@@ -253,10 +227,6 @@ int IRSendRev::Recv()
         }
     }
     
-#if __DEBUG
-    cout << "nshort = " << nshort << endl;
-    cout << "nlong  = " << nlong << endl;
-#endif
     if(count > 30)
     {
         RecvQueue(nshort);
