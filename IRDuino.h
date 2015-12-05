@@ -25,7 +25,7 @@
 #define __IRDUINO_H__
 
 #include <Arduino.h>
-#include <IRduinoRecv.h>
+#include <IRDuinoRecv.h>
 
 #define MAX_IR_CODE     50
 
