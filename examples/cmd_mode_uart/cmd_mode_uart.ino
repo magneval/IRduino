@@ -2,7 +2,7 @@
 // n cmd t_start t_stop ....
 // Key, t_start, t_stop    unit in 10ms
 
-#include <IRduino.h>
+#include <IRDuino.h>
 #include <EEPROM.h>
 #include "cmd_mode_dfs.h"
 
