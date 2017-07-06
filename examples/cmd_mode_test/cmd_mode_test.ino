@@ -2,7 +2,7 @@
 // n cmd t_start t_stop ....
 // Key, t_start, t_stop    unit in 10ms
 
-#include <IRduino.h>
+#include <IRDuino.h>
 
 unsigned char cmd_buf[] = {3, KEY_LEFT_CTRL, 0, 10, KEY_RIGHT_ALT, 0, 10, KEY_DELETE, 5, 10};
 unsigned char cmd_buf2[]  = {5, 'h', 0, 1, 'e', 2, 3, 'l', 4, 5, 'l', 6, 7, 'o', 8, 9};

@@ -24,7 +24,7 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
 
-#include <IRduino.h>
+#include <IRDuino.h>
 
 #define IRCODE_LOGOUT       0xEA
 #define IRCODE_ENTERKEY     0x72

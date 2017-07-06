@@ -18,8 +18,8 @@
  * Receive Only One Byte
  *
  */
-#include "IRduinoRecvInt.h"
-#include "IRduinoRecv.h"
+#include "IRDuinoRecvInt.h"
+#include "IRDuinoRecv.h"
 
 // Provides ISR
 #include <avr/interrupt.h>

@@ -22,8 +22,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 -----------------------------------------------------------------------------*/
 #include <Arduino.h>
-#include <IRduino.h>
-#include <IRduinoRecv.h>
+#include <IRDuino.h>
+#include <IRDuinoRecv.h>
 
 #define PINIR               6
 
@@ -116,6 +116,8 @@ bool IRduino::addItem(int irCode, void (*pfun)())
 {
     ir_code[num_code]    = irCode;
     task_fun[num_code++] = pfun;
+    // FIXME: undocumented symantics... asumming returning true means successful add
+    return true;
 }
 
 /* process */
