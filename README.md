@@ -1,2 +1,2 @@
 
-More details please goto [longan.im](longan.im)
+More details please goto [Longan Labs](https://longan-labs.cc)
