@@ -5,7 +5,7 @@
  * For details, see http://arcfn.com/2009/08/multi-protocol-infrared-remote-library.htm http://arcfn.com
  * Edited by Mitra to add new controller SANYO
  *
- * Modified by Llama
+ * Modified by Stephen (stephen@longan-labs.cc)
  * 2014-6-24
  *
  * change log:

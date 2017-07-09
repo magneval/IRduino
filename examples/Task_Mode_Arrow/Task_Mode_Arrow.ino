@@ -1,36 +1,44 @@
 /*-------------------------------------------------------------------------- +
   Task_Mode_UDLR.ino
-  2014 Copyright (c) Longan Lab.  All right reserved.
+  2017 Copyright (c) Longan Labs.  All right reserved.
  
-  Author:Llama
-  2014-6-29
+  Author: Stephen,stephen@longan-labs.cc
   
   Function - 
   It's Demo will access press up, down, left and right via 4 ir remote key.
   
   -------------------
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
+  The MIT License (MIT)
 
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
-  You should have received a copy of the GNU Lesser General Public
-  License along with this library; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+  Copyright (c) 2017 Longan Labs
+ 
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
 -----------------------------------------------------------------------------*/
 
 #include <IRDuino.h>
      
 // IR CODE DEFINE
-#define IR_CODE_UP          0xee
-#define IR_CODE_DOWN        0xae
-#define IR_CODE_LEFT        0xce
-#define IR_CODE_RIGHT       0x8e
-#define IR_CODE_SPACE       0x72
+#define IR_CODE_UP          0xce
+#define IR_CODE_DOWN        0xe6
+#define IR_CODE_LEFT        0x56
+#define IR_CODE_RIGHT       0x96
+#define IR_CODE_SPACE       0xd6
      
 void setup()
 {
@@ -52,14 +60,13 @@ void loop()
 }
 
 // add task
-
 void task_up()
 {
     iRduino.keyPressRelease(KEY_UP_ARROW);
 }
 
 void task_down()
-{
+{  
     iRduino.keyPressRelease(KEY_DOWN_ARROW);
 }
 
@@ -77,3 +84,5 @@ void task_space()
 {
     iRduino.keyPressRelease(KEY_SPACE);
 }
+
+// END FILE
